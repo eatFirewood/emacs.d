@@ -1,32 +1,62 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
+;; mylisp
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/mylisp"))
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(package-initialize) ;; You might already have this line
 
-(add-to-list 'load-path "~/.emacs.d/wt/")
+(require 'my_ui)
 
-(defun open-my-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-;; add more personal func
-;; new init-func.el 
-
-(require 'init-func)
-(require 'init-packages)
-(require 'init-ui)
-(require 'init-better-defaults)
-(require 'init-keybindings)
-
-(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-item 10)
 
 
-(load-file custom-file)
+(electric-pair-mode t)
+
+(vertico-mode t)
+(setq completion-styles '(orderless))
+(marginalia-mode t)
+
+;;complete
+(global-company-mode t)
+(setq company-minimum-prefix-length 1)
+(setq company-idle-delay 0.5)
+
+;;tab complete
+(setq tab-always-indent 'complete)
 
 
+(set 'inhibit-startup-message t)
+(global-display-line-numbers-mode 1)
+(menu-bar-mode -1)
 
-(put 'erase-buffer 'disabled nil)
-(put 'upcase-region 'disabled nil)
+(require 'go-translate)
+(setq gts-translate-list '(("en" "en")))
+(setq gts-default-translator
+      (gts-translator
+       :picker (gts-prompt-picker)
+       :engines (list (gts-google-engine) (gts-google-rpc-engine))
+       :render (gts-buffer-render)))
+
+(hl-line-mode t)
+
+(global-set-key (kbd "M-t") 'gts-do-translate)
+(global-set-key (kbd "C-h C-f") 'find-function)
+(global-set-key (kbd "C-;") 'embark-act)
+(global-set-key (kbd "C-s") 'consult-line)
+(global-set-key (kbd "M-s i") 'consult-imenu)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(consult marginalia orderless vertico go-translate)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

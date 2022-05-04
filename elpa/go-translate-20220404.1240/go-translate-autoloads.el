@@ -1,4 +1,4 @@
-;;; go-translate-autoloads.el --- automatically extracted autoloads
+;;; go-translate-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -12,14 +12,14 @@
 (autoload 'gts-do-translate "go-translate" "\
 Do the translate" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "go-translate" '("gts-default-translator")))
+(register-definition-prefixes "go-translate" '("gts-default-translator"))
 
 ;;;***
 
 ;;;### (autoloads nil "gts-core" "gts-core.el" (0 0 0 0))
 ;;; Generated autoloads from gts-core.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-core" '("gts-")))
+(register-definition-prefixes "gts-core" '("gts-"))
 
 ;;;***
 
@@ -27,7 +27,7 @@ Do the translate" t nil)
 ;;;;;;  0 0))
 ;;; Generated autoloads from gts-engine-bing.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-engine-bing" '("gts-bing-")))
+(register-definition-prefixes "gts-engine-bing" '("gts-bing-"))
 
 ;;;***
 
@@ -35,7 +35,7 @@ Do the translate" t nil)
 ;;;;;;  0 0 0))
 ;;; Generated autoloads from gts-engine-deepl.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-engine-deepl" '("gts-deepl-")))
+(register-definition-prefixes "gts-engine-deepl" '("gts-deepl-"))
 
 ;;;***
 
@@ -43,7 +43,7 @@ Do the translate" t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from gts-engine-google.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-engine-google" '("gts-google-")))
+(register-definition-prefixes "gts-engine-google" '("gts-google-"))
 
 ;;;***
 
@@ -51,14 +51,14 @@ Do the translate" t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from gts-engine-google-rpc.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-engine-google-rpc" '("gts-google-rpc-")))
+(register-definition-prefixes "gts-engine-google-rpc" '("gts-google-rpc-"))
 
 ;;;***
 
 ;;;### (autoloads nil "gts-faces" "gts-faces.el" (0 0 0 0))
 ;;; Generated autoloads from gts-faces.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-faces" '("gts-p")))
+(register-definition-prefixes "gts-faces" '("gts-p"))
 
 ;;;***
 
@@ -66,7 +66,7 @@ Do the translate" t nil)
 ;;;;;;  0))
 ;;; Generated autoloads from gts-implements.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gts-implements" '("gts-")))
+(register-definition-prefixes "gts-implements" '("gts-"))
 
 ;;;***
 
