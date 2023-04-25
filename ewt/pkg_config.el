@@ -1,0 +1,6 @@
+(vertico-mode t)
+(setq completion-styles '(orderless))
+(add-hook 'after-init-hook 'global-company-mode)
+(setq TeX-view-program-list '(("Okular" "okular --unique %o#src:%n%b")))
+(setq TeX-view-program-selection '((output-pdf "Okular")))
+(provide 'pkg_config)
