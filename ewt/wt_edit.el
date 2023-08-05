@@ -4,7 +4,4 @@
 (add-hook 'emacs-lisp-mode-hook 'electric-pair-local-mode)
 
 
-
-
-
 (provide 'wt_edit)
