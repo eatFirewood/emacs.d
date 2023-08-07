@@ -1,3 +1,4 @@
+
 (add-hook 'c-mode-hook 'electric-pair-local-mode)
 (add-hook 'c++-mode-hook 'electric-pair-local-mode)
 (add-hook 'lisp-mode-hook 'electric-pair-local-mode)
